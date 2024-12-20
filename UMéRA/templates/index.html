@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 
     <!-- Google Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +37,7 @@
         <section id="dashboard">
             <h1>Hi, I'm UMéRA AI 😊</h1>
             <div id="chatbox">
-                <p class="botText"><span>Hi there!</span></p>
+                <p class="removeBotText"><span></span></p>
             </div>
             <div class="inputContainer">
                 <div id="userInput">

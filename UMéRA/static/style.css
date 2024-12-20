@@ -14,7 +14,6 @@ body {
 
 #main {
     display: flex;
-    /* flex-direction: row; */
     flex-direction: column;
     justify-content: center;
     height: 100vh;
@@ -24,17 +23,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;
-    flex:0.2 1 auto;
+    flex: 0.2 1 auto;
     gap: 25px;
     padding: 25px;
-    /* max-width: 300px; */
 }
 
 #dashboard {
-    /* background-color: purple; */
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
     flex-shrink: 0;
     flex-grow: 1;
     padding: 25px;
@@ -65,8 +62,9 @@ body {
     justify-content: space-between;
     list-style-type: none;
 }
+
 #nav .nav-items {
-    color: rgb(93,93,93, 0.8);
+    color: rgb(93, 93, 93, 0.8);
     font-size: 20px;
 }
 
@@ -79,7 +77,6 @@ body {
     border-radius: 50px;
 }
 
-
 .fa-paper-plane {
     font-size: 30px;
 }
@@ -87,21 +84,41 @@ body {
 #chatbox {
     margin: 50px auto;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
 }
+.removeBotText {
+    display : none;
+}
+
 .botText, .userText {
     font-family: monospace;
     font-size: 16px;
     line-height: 25px;
+    padding: 10px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below each message */
+    max-width: 80%; /* Limit message width */
 }
+
+.botText {
+    background-color: rgba(255,255,255, 0.1); /* Light gray background for bot */
+    border: 1px solid #333 ;
+    text-align: left; /* Align text to the left */
+}
+
 .botText span {
-    color: blue;
-    display: block;
-    text-align: left;
+    color: #ffffff; /* Black text for bot */
 }
+
+.userText {
+    text-align: right; /* Align text to the right */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
 .userText span {
-    color: green;
-    display: block;
-    text-align: right;
+    color: #ffffff; /* Black text for user */
 }
 
 .inputContainer {
@@ -110,20 +127,20 @@ body {
     bottom: 80px;
 }
 
-.inputContainer  .fa-paper-plane {
-    color : #890709;
+.inputContainer .fa-paper-plane {
+    color: #890709;
 }
 
 #userInput {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0  20px 0 0;
-    /* margin: 50px auto; */
+    padding: 0 20px 0 0;
     width: 100%;
     border-radius: 50px;
     background-color: #f9f9f9;
 }
+
 #textInput {
     border-bottom: 3px solid green;
     outline: none;
@@ -131,26 +148,25 @@ body {
     background-color: transparent;
     font-size: 16px;
     padding: 20px;
-    /* padding: 10px 10px 50px; */
-    /* height: 80px; */
-    /* width: 80%; */
 }
+
 #buttonInput {
     padding: 5px 10px;
     font-size: 16px;
 }
+
 h1 {
     text-align: center;
 }
 
-@media (max-width: 768px) { 
-    /* Styles for tablets and smaller devices */ 
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) { 
-    /* Styles for tablets only */ 
-  }
-  
-  @media (min-width: 1025px) { 
-    /* Styles for desktops only */ 
-  }
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for tablets only */
+}
+
+@media (min-width: 1025px) {
+    /* Styles for desktops only */
+}

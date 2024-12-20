@@ -46,5 +46,6 @@ $("#textInput").keypress(function (e) {
 });
 
 $('.fa-paper-plane').click(function () {
+    $(this).addClass("botTex")
     getUserResponse();
 });
