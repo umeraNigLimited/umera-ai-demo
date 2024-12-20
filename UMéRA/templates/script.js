@@ -45,6 +45,6 @@ $("#textInput").keypress(function (e) {
     }
 });
 
-$('#buttonInput').click(function () {
+$('.fa-paper-plane').click(function () {
     getUserResponse();
 });
